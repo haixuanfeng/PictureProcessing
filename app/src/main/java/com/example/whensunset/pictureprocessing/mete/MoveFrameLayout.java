@@ -22,7 +22,7 @@ import com.example.whensunset.pictureprocessing.base.util.MyLog;
  */
 
 public class MoveFrameLayout extends FrameLayout {
-    public static String TAG = "何时夕:MoveFrameLayout";
+    public static String TAG = "my:MoveFrameLayout";
     private static final int STROKE_WIDTH = 4;
     private OnPlaceChangedListener mOnPlaceChangedListener;
 

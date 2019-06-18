@@ -35,7 +35,7 @@ import io.reactivex.Flowable;
  */
 
 public class PictureFrameMenuVM extends BaseSeekBarRecycleViewVM<PictureFrameMenuVM.PictureFrameItemVM> implements CutView.OnLimitRectChangedListener {
-    public static final String TAG = "何时夕:PictureFrameMenuVM";
+    public static final String TAG = "my:PictureFrameMenuVM";
 
     public final ObservableField<String> mInsertImagePath = new ObservableField<>();
     private final IImageUriFetch mLocalFrameImageUriFetch = LocalFrameImageUriFetch.getInstance();

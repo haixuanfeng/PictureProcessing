@@ -23,7 +23,7 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public abstract class ConsumerChain<T> implements Chain<T , Mat> {
-    public static final String TAG = "何时夕:ConsumerChain";
+    public static final String TAG = "my:ConsumerChain";
 
     private List<BaseMyConsumer> mConsumerList;// 储存 consumer的列表
     private int mConsumerPoint;// 指向当前consumer的指针

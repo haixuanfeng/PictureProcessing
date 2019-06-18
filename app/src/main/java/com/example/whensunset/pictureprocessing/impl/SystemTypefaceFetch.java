@@ -15,7 +15,7 @@ import java.util.Map;
  */
 
 public class SystemTypefaceFetch implements ITypefaceFetch {
-    public static final String TAG = "何时夕:SystemTypefaceFetch";
+    public static final String TAG = "my:SystemTypefaceFetch";
 
     private static SystemTypefaceFetch mSystemTypefaceFetch;
     private static final Map<String , Typeface> mTypeface = new HashMap<>();

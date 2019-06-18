@@ -1,6 +1,7 @@
 package com.example.whensunset.pictureprocessing.impl;
 
 import android.graphics.Bitmap;
+import android.util.Log;
 
 import com.example.whensunset.pictureprocessing.PictureProcessingApplication;
 import com.example.whensunset.pictureprocessing.base.IAIImageFetch;
@@ -20,7 +21,7 @@ import static org.opencv.core.CvType.CV_8U;
  */
 
 public class BaseRapidStyleMigrationAIImageFetch implements IAIImageFetch {
-    public static final String TAG = "何时夕:BaseRapidStyleMigrationAIImageFetch";
+    public static final String TAG = "my:BaseRapidStyleMigrationAIImageFetch";
 
     private String mModelFile = "file:///android_asset/starry.pb";
     private String mInputNode = "padsss:0";
@@ -77,12 +78,14 @@ public class BaseRapidStyleMigrationAIImageFetch implements IAIImageFetch {
 
         inMat.get(0, 0, mInFloatValues);
         middleMat.release();
-        MyLog.d(TAG, "BaseRapidStyleMigrationAIImageFetch", "状态:读取图片数据时间", "快速风格迁移读取图片数据时间", System.currentTimeMillis() - initTime);
+        MyLog.d(TAG, "1BaseRapidStyleMigrationAIImageFetch", "状态:读取图片数据时间", "快速风格迁移读取图片数据时间", System.currentTimeMillis() - initTime);
 
 
         initTime = System.currentTimeMillis();
         inferenceInterface.feed(mInputNode, mInFloatValues, 1, mInHeight, mInWidth, 3);
+        MyLog.d(TAG, "run: ","afterfeed");
         inferenceInterface.run(new String[] {mOutputNode}, true);
+        MyLog.d(TAG, "run: ","afterrun");
         inferenceInterface.fetch(mOutputNode, mOutFloatValues);
         MyLog.d(TAG, "BaseRapidStyleMigrationAIImageFetch", "状态:运行时间", "快速风格迁移运行时间", System.currentTimeMillis() - initTime);
 

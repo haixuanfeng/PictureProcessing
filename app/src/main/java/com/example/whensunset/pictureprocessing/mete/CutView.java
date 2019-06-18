@@ -14,18 +14,17 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 
 import com.example.whensunset.pictureprocessing.base.util.MyLog;
 
 import static com.example.whensunset.pictureprocessing.base.BaseSeekBarRecycleViewVM.PROGRESS_MAX;
 
-/**
- * Created by whensunset on 2018/3/11.
- */
+
 
 public class CutView extends PinchImageView {
-    public static String TAG = "何时夕:CutView";
+    public static String TAG = "my:CutView";
     public static final int SCALE_MODEL = 0;
     public static final int CUT_MODEL = 1;
     public static final int INSERT_IMAGE_MODEL = 2;
@@ -184,6 +183,7 @@ public class CutView extends PinchImageView {
 
     private Bitmap mInsertBitmap = null;
     public void setInsertImagePath(String insertImageUri) {
+        MyLog.d(TAG, "setInsertImagePath: ","in","bitmap");
         mInsertImagePath = insertImageUri;
         if (!TextUtils.isEmpty(mInsertImagePath)) {
             if (mInsertBitmap != null) {
@@ -208,6 +208,7 @@ public class CutView extends PinchImageView {
     }
 
     private org.opencv.core.Rect getOpencvCutRect() {
+        Log.d(TAG, "getOpencvCutRect: 刚进入");
         Drawable imgDrawable = getDrawable();
         if (imgDrawable != null) {
             org.opencv.core.Rect rect = new org.opencv.core.Rect((int) ((mLimitRect.left - mLimitMaxRect.left) / zoomCoefficientX),
@@ -240,7 +241,7 @@ public class CutView extends PinchImageView {
     }
 
     private void drawMask(Canvas canvas) {
-        MyLog.d(TAG, "drawMask", "状态gggg:mModel:mLimitRect:mLimitMaxRect:", "进入绘制蒙版" , mModel , mLimitRect , mLimitMaxRect);
+        MyLog.d(TAG, "1drawMask", "状态gggg:mModel:mLimitRect:mLimitMaxRect:", "进入绘制蒙版" , mModel , mLimitRect , mLimitMaxRect);
 
         switch (mModel) {
             case SCALE_MODEL:
@@ -371,6 +372,7 @@ public class CutView extends PinchImageView {
     }
 
     public interface OnLimitRectChangedListener {
+
         void onLimitRectChanged(org.opencv.core.Rect rect);
 
         default boolean isImageSizeChanged(org.opencv.core.Rect nowRect , org.opencv.core.Rect lastCut) {

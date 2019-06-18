@@ -32,11 +32,9 @@ import static com.example.whensunset.pictureprocessing.staticParam.StaticParam.P
 import static com.example.whensunset.pictureprocessing.staticParam.StaticParam.PICTURE_FRAME_ADD_ASSET_IMAGE_NAME;
 import static com.example.whensunset.pictureprocessing.staticParam.StaticParam.PICTURE_FRAME_ADD_IMAGE;
 
-/**
- * Created by whensunset on 2018/3/2.
- */
+
 public class PictureProcessingApplication extends Application {
-    public static final String TAG = "何时夕:PictureProcessingApplication";
+
 
     private static Context appContext;
     @Override

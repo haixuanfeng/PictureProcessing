@@ -7,12 +7,10 @@ import com.example.whensunset.pictureprocessing.pictureProcessing.filteraction.F
 
 import org.opencv.core.Mat;
 
-/**
- * Created by whensunset on 2018/3/18.
- */
+
 
 public class PictureFilterMyConsumer extends BaseMyConsumer {
-    public static String TAG = "何时夕:PictureFilterMyConsumer";
+    public static String TAG = "my:PictureFilterMyConsumer";
 
     private FilterAction mFilterAction;
 

@@ -21,7 +21,7 @@ import io.reactivex.Flowable;
  */
 
 public class SystemImageUriFetch implements IImageUriFetch {
-    public static final String TAG = "何时夕:SystemImageUriFetch";
+    public static final String TAG = "my:SystemImageUriFetch";
 
     private static SystemImageUriFetch mSystemImageUriFetch;
 

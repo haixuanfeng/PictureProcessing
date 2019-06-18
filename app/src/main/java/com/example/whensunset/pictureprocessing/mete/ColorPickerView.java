@@ -16,7 +16,7 @@ import android.util.AttributeSet;
  */
 
 public class ColorPickerView extends AppCompatSeekBar {
-    public static String TAG = "何时夕:ColorPickerView";
+    public static String TAG = "my:ColorPickerView";
     private boolean isWB = false;
 
     public ColorPickerView(Context context) {

@@ -17,7 +17,7 @@ import com.example.whensunset.pictureprocessing.viewModel.includeLayoutVM.Pictur
  */
 
 public class PictureTextParamSelectDialog extends DialogFragment {
-    public static final String TAG = "何时夕:PictureTextParamSelectDialog";
+    public static final String TAG = "my";
 
     private PictureTextParamDialogVM mPictureTextParamDialogVM;
     private ActivityPictureProcessingPictureTextParamDialogBinding mActivityPictureProcessingPictureTextParamDialogBinding;

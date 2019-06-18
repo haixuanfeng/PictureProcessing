@@ -111,6 +111,7 @@ public class PictureProcessingActivityVM extends ParentBaseVM {
         initDefaultUIActionManager();
 
         mImagePath = Uri.parse(imageUri).getPath();
+
         initChildBaseVM(PictureFilterMenuVM.class , CHILD_VM_mPictureFilterMenuVM);
         initChildBaseVM(PictureTransformMenuVM.class , CHILD_VM_mPictureTransformMenuVM);
         initChildBaseVM(PictureParamMenuVM.class , CHILD_VM_mPictureParamMenuVM);

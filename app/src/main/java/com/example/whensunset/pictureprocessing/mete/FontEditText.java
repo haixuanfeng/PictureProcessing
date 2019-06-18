@@ -9,7 +9,7 @@ import android.util.AttributeSet;
  */
 
 public class FontEditText extends android.support.v7.widget.AppCompatEditText {
-    public static String TAG = "何时夕:MyEditText";
+    public static String TAG = "my:MyEditText";
 
     public FontEditText(Context context) {
         super(context);

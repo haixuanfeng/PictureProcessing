@@ -12,7 +12,7 @@ import org.opencv.core.Mat;
  */
 
 public abstract class BaseMyConsumer implements MyConsumer<Mat , Mat> {
-    public static final String TAG = "何时夕:BaseMyConsumer";
+    public static final String TAG = "my:BaseMyConsumer";
 
     protected boolean isSaveNowResult = false;
     private Mat mNowResult;
